@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>SNAKE — TAKE YOUR SCORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="stripes" aria-hidden="true"></div>
+
+<main class="stage" id="stage">
+
+  <!-- ─────────── left rail: title + score ─────────── -->
+  <section class="rail">
+    <div class="logo">
+      <span class="logo-sub">PHANTOM</span>
+      <span class="logo-main">SNAKE</span>
+      <span class="logo-tag">TAKE YOUR SCORE</span>
+    </div>
+
+    <div class="panel panel-score">
+      <span class="panel-label">SCORE</span>
+      <span class="panel-value" id="score">0</span>
+    </div>
+
+    <div class="panel panel-best">
+      <span class="panel-label">BEST</span>
+      <span class="panel-value" id="best">0</span>
+    </div>
+
+    <div class="panel panel-chain">
+      <span class="panel-label">CHAIN</span>
+      <span class="panel-value" id="chain">x1</span>
+    </div>
+
+    <div class="keys">
+      <p><b>&larr; &uarr; &darr; &rarr;</b> / <b>WASD</b> move</p>
+      <p><b>SPACE</b> pause &nbsp;·&nbsp; <b>R</b> restart</p>
+      <p class="keys-touch">swipe to move</p>
+    </div>
+  </section>
+
+  <!-- ─────────── play field ─────────── -->
+  <section class="field-wrap">
+    <div class="field-frame" id="frame">
+      <canvas id="game" width="600" height="600" aria-label="Snake game board"></canvas>
+
+      <!-- cut-in burst on eat -->
+      <div class="cutin" id="cutin" aria-hidden="true">
+        <span class="cutin-text" id="cutinText">ALL-OUT!</span>
+      </div>
+
+      <!-- overlays -->
+      <div class="overlay" id="overlay">
+        <div class="overlay-card" id="overlayCard">
+          <h1 class="overlay-title" id="overlayTitle">SHOWTIME</h1>
+          <p class="overlay-body" id="overlayBody">Steal every treasure. Don't bite your own tail.</p>
+          <button class="btn" id="startBtn" type="button">START THE HEIST</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="credit">Fan tribute. Original code and art — no assets from the source game.</footer>
+
+<script src="game.js"></script>
+</body>
+</html>

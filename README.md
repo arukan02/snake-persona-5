@@ -8,7 +8,9 @@ every time you steal a calling card.
 
 ## Play it
 
-No build step, no dependencies, no server required.
+**[Play online](https://arukan02.github.io/snake-persona-5/)**, right in your browser.
+
+Or run it locally. No build step, no dependencies, no server required.
 
 ```bash
 git clone https://github.com/arukan02/snake-persona-5.git
